@@ -14,8 +14,20 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "axios-progress-bar": "^1.1.8",
+    "bootstrap": "^4.1.0",
+    "moment": "^2.22.1",
+    "nuxt-dropzone": "^0.2.7",
+    "vee-validate": "^2.0.6",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-analytics": "^5.10.2",
+    "vue-axios": "^2.1.1",
+    "vue-localstorage": "^0.6.2",
+    "vue-momentjs": "^0.1.2",
+    "vue-router": "^3.0.1",
+    "vue-toasted": "^1.1.24",
+    "vue2-editor": "^2.4.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

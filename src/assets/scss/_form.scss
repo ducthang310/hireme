@@ -1,0 +1,119 @@
+.field-wrap, .form-control, .input, .textarea {
+  @include field-border;
+}
+
+.input {
+  height: 40px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+
+  label {
+    display: block;
+    width: 100%;
+    margin-bottom: 6px;
+  }
+}
+
+.fg-basic {
+  width: 180px;
+  margin-right: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.input, .textarea {
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $text-color-gray-light;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $text-color-gray-light;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $text-color-gray-light;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $text-color-gray-light;
+  }
+}
+
+
+//**********------------------------------------------------------------------------------------------------------------
+//***   Error
+//
+.form-group {
+  &.has-error {
+    .input, .textarea {
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $error-color;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: $error-color;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: $error-color;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: $error-color;
+      }
+    }
+
+    .input-icon-wrap {
+      .i-icon {
+        color: $error-color;
+      }
+    }
+
+    .field-wrap, .form-control, .input, .textarea {
+      border-color: $error-color;
+    }
+  }
+}
+
+
+
+//**********------------------------------------------------------------------------------------------------------------
+//***   Buttons
+//
+.btn {
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  padding: 0 15px;
+  font-weight: 500;
+  @include transition-color-bkg-border;
+}
+.btn-default {
+  background-color: #ffffff;
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  color: #ffffff;
+
+  &:hover {
+    background-color: $primary-color-dark;
+  }
+}
+
+.btn-line-primary {
+  background-color: #ffffff;
+  color: $primary-color;
+  box-shadow: inset 0 0 0 1px $primary-color, inset 0 0 0 2px transparent, inset 0 0 0 3px transparent;
+
+  &:hover {
+    background-color: rgba(0,132,191,0.4);
+  }
+}
+
+.quillWrapper {
+  background: #ffffff;
+}

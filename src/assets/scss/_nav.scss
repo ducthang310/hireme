@@ -1,0 +1,11 @@
+.main-menu {
+  margin-left: 30px;
+  .nav-item {
+    &.active {
+      font-weight: 700;
+    }
+  }
+}
+.navbar-brand {
+  font-weight: 500;
+}
