@@ -7,21 +7,10 @@
  * @type {}
  */
 const mainConfig = {
-  baseApiUrl: 'https://api.f45-academy.project-staging.com/v1',
+  baseApiUrl: 'https://shiroad.com',
   baseUrl: '',
   isDevelopmentMode: true,
   useFakeData: false,
-  api: {}
-}
-
-mainConfig.api = {
-  user: {
-    create: mainConfig.baseApiUrl + '/users',
-  },
-
-  file: {
-    upload: mainConfig.baseApiUrl + '/files'
-  }
 }
 
 export default function (Vue) {
