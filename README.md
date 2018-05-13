@@ -1,6 +1,8 @@
-# askme
+# HireMe
+## Intro
+This is a small website made with VueJs + Bootstrap 4.
+It's used to making requests for me. You can try it in [here](http://hireme.shiroad.com/)
 
-> A Vue.js project
 
 ## Build Setup
 
@@ -13,18 +15,6 @@ npm run dev
 
 # build for production with minification
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
