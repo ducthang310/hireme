@@ -4,6 +4,7 @@ import Index from '@/components/Index'
 import Requests from '@/components/Requests'
 import Intro from '@/components/Intro'
 import CreateRequest from '@/components/CreateRequest'
+import DetailRequest from '@/components/DetailRequest'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/create-request',
       name: 'create_request',
       component: CreateRequest
+    },
+    {
+      path: '/request/:id',
+      name: 'request_detail',
+      component: DetailRequest
     }
   ]
 })
