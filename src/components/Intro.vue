@@ -1,38 +1,67 @@
 <template>
   <div class="text-center">
-    <h4>Have a nice day!</h4>
-    <p>If you want to hire me or need my help, you can create an request for me.</p>
-    <br/>
 
-    <p>About this website:</p>
-    <p></p>
-    <p>I use VueJs + Bootstrap 4 for frontend</p>
-    <p>Wordpress for managing Requests, content of Intro page</p>
-    <p>If you like it, you can download from <a href="https://github.com/ducthang310" target="_blank">my repository</a></p>
-    <p></p>
+    <div v-if="!isLoading && intro" v-html="intro">
+
+    </div>
+
+    <div v-if="!isLoading && !intro" class="text-center">
+      Can not get intro
+    </div>
+
+    <div v-if="isLoading" class="loading-container">
+      <icon-loading></icon-loading>
+    </div>
+
   </div>
 </template>
 
 <script>
-export default {
-  name: 'Intro',
-  computed: {
+  import IconLoading from '@/components/IconLoading'
 
-  },
+  export default {
+    name: 'Intro',
+    components: {
+      IconLoading
+    },
+    computed: {},
 
-  data () {
-    return {
+    data() {
+      return {
+        intro: null,
+        isLoading: false
+      }
+    },
+
+    methods: {
+      getIntro () {
+        var vm = this
+        vm.isLoading = true
+
+        // Call api to get requests
+        vm.$http.post(this.$mcf.baseApiUrl, {
+          action: 'get_intro',
+          key: 'UFjSwjHQii'
+        })
+          .then(res => {
+            if (res.data.success) {
+              vm.intro = res.data.intro
+            } else {
+              vm.$toasted.show(res.data.message)
+            }
+
+            vm.isLoading = false
+          }, () => {
+
+            vm.isLoading = false
+          })
+      }
+    },
+
+    created() {
+      this.getIntro()
     }
-  },
-
-  methods: {
-
-  },
-
-  created () {
-
   }
-}
 </script>
 
 <style>
