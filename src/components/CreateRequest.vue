@@ -16,7 +16,7 @@
         <div class="col-md-6">
           <div class="form-group" :class="{'has-error': errors.has('email') }">
             <label>Email</label>
-            <input type="email" class="form-control" v-model="request.email" v-validate="'required'" data-vv-name="email"/>
+            <input type="email" class="form-control" v-model="request.email" v-validate="'required|email'" data-vv-name="email"/>
           </div>
           <div class="form-group" :class="{'has-error': errors.has('title') }">
             <label>Title</label>
